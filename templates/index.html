@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+    {% load static %}
     <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -10,10 +11,10 @@
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
         <!--==================== SWIPER CSS ===================-->
-        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+        <link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}">
 
         <!--==================== CUSTOM CSS ====================-->
-        <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     </head>
     <body>
         <!--==================== HEADER ====================-->
@@ -78,7 +79,7 @@
                         </div>
 
                         <div class="home__img">
-                            <img class="home__blob-img" src="assets/img/profile1.jpg" alt="Profile Picture">
+                            <img class="home__blob-img" src="{% static 'img/profile1.jpg' %}" alt="Profile Picture">
                         </div>
 
                         <div class="home__data">
@@ -429,7 +430,7 @@
                     <div class="swiper-wrapper">
                         <!--==================== PORTFOLIO 1 ====================-->
                         <div class="portfolio__content grid swiper-slide">
-                            <img src="assets/img/portfolio1.jpg" alt="" class="portfolio__img">
+                            <img src="{% static 'img/portfolio1.jpg' %}" alt="" class="portfolio__img">
 
                             <div class="portfolio__data">
                                 <div class="portfolio__header">
@@ -463,7 +464,7 @@
 
                         <!--==================== PORTFOLIO 2 ====================-->
                         <div class="portfolio__content grid swiper-slide">
-                            <img src="assets/img/portfolio2.jpg" alt="" class="portfolio__img">
+                            <img src="{% static 'img/portfolio2.jpg' %}" alt="" class="portfolio__img">
 
                             <div class="portfolio__data">
                                 <h3 class="portfolio__title">Brand Design</h3>
@@ -479,7 +480,7 @@
 
                         <!--==================== PORTFOLIO 3 ====================-->
                         <div class="portfolio__content grid swiper-slide">
-                            <img src="assets/img/portfolio3.jpg" alt="" class="portfolio__img">
+                            <img src="{% static 'img/portfolio3.jpg' %}" alt="" class="portfolio__img">
 
                             <div class="portfolio__data">
                                 <h3 class="portfolio__title">Online Store</h3>
@@ -603,7 +604,7 @@
                         <!--==================== Blog 1 ====================-->
                         <div class="blog__wrapper swiper-slide">
                             <div class="blog__banner">
-                                <img src="assets/img/portfolio3.jpg" alt="">
+                                <img src="{% static 'img/portfolio3.jpg' %}" alt="">
                             </div>
                             <a class="blog__name">What is Python Myanmar? I am from Myanmar?</a>
                             <div class="blog__content">
@@ -616,7 +617,7 @@
                         <!--==================== Blog 2 ====================-->
                         <div class="blog__wrapper swiper-slide">
                             <div class="blog__banner">
-                                <img src="assets/img/portfolio3.jpg" alt="">
+                                <img src="{% static 'img/portfolio3.jpg' %}" alt="">
                             </div>
                             <a class="blog__name">What is Python Myanmar? I am from Myanmar?</a>
                             <div class="blog__content">
@@ -629,7 +630,7 @@
                         <!--==================== Blog 3 ====================-->
                         <div class="blog__wrapper swiper-slide">
                             <div class="blog__banner">
-                                <img src="assets/img/portfolio3.jpg" alt="">
+                                <img src="{% static 'img/portfolio3.jpg' %}" alt="">
                             </div>
                             <a class="blog__name">What is Python Myanmar? I am from Myanmar?</a>
                              <div class="qualification__calendar">
@@ -666,7 +667,7 @@
                     <div class="swiper-wrapper">
                         <!--==================== PORTFOLIO 1 ====================-->
                         <div class="portfolio__content grid swiper-slide">
-                            <img src="assets/img/Robotians1.jpg" alt="" class="portfolio__img">
+                            <img src="{% static 'img/Robotians1.jpg' %}" alt="" class="portfolio__img">
 
                             <div class="portfolio__data">
                                 <div class="portfolio__header">
@@ -684,7 +685,7 @@
 
                         <!--==================== PORTFOLIO 2 ====================-->
                         <div class="portfolio__content grid swiper-slide">
-                            <img src="assets/img/Robotians2.jpg" alt="" class="portfolio__img">
+                            <img src="{% static 'img/Robotians2.jpg' %}" alt="" class="portfolio__img">
 
                             <div class="portfolio__data">
                                 <div class="portfolio__header">
@@ -702,7 +703,7 @@
 
                         <!--==================== PORTFOLIO 3 ====================-->
                         <div class="portfolio__content grid swiper-slide">
-                            <img src="assets/img/Robotians3.jpg" alt="" class="portfolio__img">
+                            <img src="{% static 'img/Robotians3.jpg' %}" alt="" class="portfolio__img">
 
                             <div class="portfolio__data">
                                 <div class="portfolio__header">
@@ -720,7 +721,7 @@
 
                         <!--==================== PORTFOLIO 4 ====================-->
                         <div class="portfolio__content grid swiper-slide">
-                            <img src="assets/img/COR2.1.jpg" alt="" class="portfolio__img">
+                            <img src="{% static 'img/COR2.1.jpg' %}" alt="" class="portfolio__img">
 
                             <div class="portfolio__data">
                                 <div class="portfolio__header">
@@ -738,7 +739,7 @@
 
                         <!--==================== PORTFOLIO 5 ====================-->
                         <div class="portfolio__content grid swiper-slide">
-                            <img src="assets/img/COR2.2.jpg" alt="" class="portfolio__img">
+                            <img src="{% static 'img/COR2.2.jpg' %}" alt="" class="portfolio__img">
 
                             <div class="portfolio__data">
                                 <div class="portfolio__header">
@@ -756,7 +757,7 @@
 
                         <!--==================== PORTFOLIO 6 ====================-->
                         <div class="portfolio__content grid swiper-slide">
-                            <img src="assets/img/COR2.3.jpg" alt="" class="portfolio__img">
+                            <img src="{% static 'img/COR2.3.jpg' %}assets/" alt="" class="portfolio__img">
 
                             <div class="portfolio__data">
                                 <div class="portfolio__header">
@@ -834,9 +835,9 @@
         </a>
 
         <!--==================== SWIPER JS ====================-->
-        <script src="assets/js/swiper-bundle.min.js"></script>
+        <script src="{% static 'js/swiper-bundle.min.js' %}"></script>
 
         <!--==================== MAIN JS ====================-->
-        <script src="assets/js/main.js"></script>
+        <script src="{% static 'js/main.js' %}"></script>
     </body>
 </html>
