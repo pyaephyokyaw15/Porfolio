@@ -1,843 +1,792 @@
-<!DOCTYPE html>
-    {% load static %}
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Pyae Phyo Kyaw | Portfolio</title>
+{% extends 'layout.html' %}
+{% load static %}
 
-        <!--==================== UNICONS ====================-->
-        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+{% block main %}
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#home" class="nav__logo">Pyae Phyo Kyaw</a>
 
-        <!--==================== SWIPER CSS ===================-->
-        <link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}">
-
-        <!--==================== CUSTOM CSS ====================-->
-        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    </head>
-    <body>
-        <!--==================== HEADER ====================-->
-        <header class="header" id="header">
-            <nav class="nav container">
-                <a href="#home" class="nav__logo">Pyae Phyo Kyaw</a>
-
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list grid">
-                        <li class="nav__item">
-                            <a href="#home" class="nav__link  active-link">
-                                <i class="uil uil-estate nav__icon"></i>Home
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#qualification" class="nav__link">
-                                <i class="uil uil-file-alt nav__icon"></i>Qualification
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#projects" class="nav__link">
-                                <i class="uil uil-scenery nav__icon"></i>Projects
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#blog" class="nav__link">
-                                <i class="uil uil-message nav__icon"></i>Blog
-                            </a>
-                        </li>
-                    </ul>
-
-                    <i class="uil uil-times nav__close" id="nav-close"></i>
-                </div>
-
-                <div class="nav__btns">
-                    <!-- Theme change button -->
-                    <i class="uil uil-moon change-theme" id="theme-button"></i>
-
-                    <div class="nav__toggle" id="nav-toggle">
-                        <i class="uil uil-apps"></i>
-                    </div>
-                </div>
-            </nav>
-        </header>
-
-        <!--==================== MAIN ====================-->
-        <main class="main">
-            <!--==================== HOME ====================-->
-            <section class="home section" id="home">
-                <div class="home__container container grid">
-                    <div class="home__content grid">
-                        <div class="home__social">
-                            <a href="https://www.linkedin.com/in/pyae-phyo-kyaw-a925a21a9/" target="_blank" class="home__social-icon">
-                                <i class="uil uil-linkedin-alt"></i>
-                            </a>
-                            <a href="https://github.com/pyaephyokyaw15" target="_blank" class="home__social-icon">
-                                <i class="uil uil-github-alt"></i>
-                            </a>
-                            <a href="mailto:pyaekyaw1571999@gmail.com" target="_blank" class="home__social-icon">
-                                <i class="uil uil-envelope-alt"></i>
-                            </a>
-                        </div>
-
-                        <div class="home__img">
-                            <img class="home__blob-img" src="{% static 'img/profile1.jpg' %}" alt="Profile Picture">
-                        </div>
-
-                        <div class="home__data">
-                            <h3>Hello, I'm</h3>
-                            <h1 class="home__title">Pyae Phyo Kyaw</h1>
-                            <h3 class="home__subtitle">Software Developer</h3>
-                            <p class="home__description">
-                                A passionate software developer with 3+ years' experience in software development.
-                                Specialized in Backend Development(Python Stack).
-                            </p>
-                            <a href="mailto:pyaekyaw1571999@gmail.com" class="button button--flex">
-                                Contact Me<i class="uil uil-message button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="home__scroll">
-                        <a href="#qualification" class="home__scroll-button button--flex">
-                            <i class="uil uil-mouse-alt home__scroll-mouse"></i>
-                            <span class="home__scroll-name">Scroll down</span>
-                            <i class="uil uil-arrow-down home__scroll-arrow"></i>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list grid">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link  active-link">
+                            <i class="uil uil-estate nav__icon"></i>Home
                         </a>
-                    </div>
-                </div>
-            </section>
-
-
-            <!--==================== QUALIFICATION ====================-->
-            <section class="qualification section" id="qualification">
-                <h2 class="section__title">Qualification</h2>
-                <span class="section__subtitle">My personal journey</span>
-
-                <div class="qualification__container container">
-                    <div class="qualification__tabs">
-                        <div class="qualification__button button--flex qualification__active" data-target="#education">
-                            <i class="uil uil-graduation-cap qualification__icon"></i>
-                            Education
-                        </div>
-                        <div class="qualification__button button--flex" data-target="#work">
-                            <i class="uil uil-suitcase qualification__icon"></i>
-                            Work
-                        </div>
-                        <div class="qualification__button button--flex" data-target="#certificates">
-                            <i class="uil uil-file-bookmark-alt qualification__icon"></i>
-                            Certificates
-                        </div>
-                    </div>
-
-                    <div class="qualification__sections">
-                        <!--==================== Education ====================-->
-                        <div class="qualification__content qualification__active" data-content id="education">
-                            <!--==================== QUALIFICATION 1====================-->
-                            <div class="qualification__data">
-                                <div>
-                                    <h3 class="qualification__title">Computer Science  (Bachelor's Degree)</h3>
-                                    <a class="qualification__link" href="https://www.uopeople.edu/"><span class="qualification__subtitle">University of the People</span></a>
-                                    <div class="qualification__calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        Nov 2021 - Present
-                                    </div>
-
-                                    <ul class="bullets">
-                                        <li>Algorithm and Data structure</li>
-                                        <li>Database Design</li>
-                                        <li>Artificial Intelligence</li>
-                                    </ul>
-                                </div>
-
-                                <div>
-                                    <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
-                                </div>
-                            </div>
-
-                            <!--==================== QUALIFICATION 2====================-->
-                            <div class="qualification__data">
-                                <div></div>
-
-                                <div>
-                                    <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
-                                </div>
-                                <div>
-                                    <h3 class="qualification__title">Bachelor of Engineering  (Mechatronic)</h3>
-                                    <a class="qualification__link" href="https://www.linkedin.com/school/mandalay-technological-university-mtu/"><span class="qualification__subtitle">Mandalay Technological University</span></a>
-                                    <div class="qualification__calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        Dec 2015 - March 2020
-                                    </div>
-
-                                    <div class="qualification__note">
-                                        Our university is Rank-2 Technological University in our country, Myanmar.
-                                        My study is currently suspended due to the Covid outbreak and political affairs in Myanmar.
-                                    </div>
-
-                                    <ul class="bullets">
-                                        <li>Robotics</li>
-                                        <li>Automation Engineering</li>
-                                        <li>Artificial Intelligence</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                             <!--==================== QUALIFICATION 3====================-->
-                            <div class="qualification__data">
-                                <div>
-                                    <h3 class="qualification__title">AWS Machine Learning NanoDegree</h3>
-                                    <a class="qualification__link" href="https://www.udacity.com/"><span class="qualification__subtitle">Udacity</span></a>
-                                    <div class="qualification__calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        Jul 2020 - Oct 2020
-                                    </div>
-                                    <div class="qualification__note">
-                                       I won scholarship for this NanoDegree. This scholarship program chose 325 out of all applicants all over the world according to the foundation course results.
-                                    </div>
-
-                                     <ul class="bullets">
-                                        <li>Machine Learning</li>
-                                        <li>AWS Services</li>
-                                    </ul>
-                                </div>
-
-                                <div>
-                                    <span class="qualification__rounder"></span>
-<!--                                    <span class="qualification__line"></span>-->
-                                </div>
-                            </div>
-                        </div>
-
-                         <!--==================== Work ====================-->
-                        <div class="qualification__content" data-content id="work">
-                            <!--==================== QUALIFICATION 1====================-->
-                            <div class="qualification__data">
-                                <div>
-                                    <h3 class="qualification__title">Software Developer</h3>
-                                    <a class="qualification__link" href="https://liveplaza.online/"><span class="qualification__subtitle">SSP Ventures Myanmar</span></a>
-                                    <div class="qualification__calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        Dec 2021 - Present
-                                    </div>
-                                    <ul class="bullets">
-                                        <li><a class="qualification__link" href="https://liveplaza.online/">LIVEPlaza</a> - Multi-vendor Online Market Platform</li>
-                                        <li>Responsible for upgrading the existing modules</li>
-                                        <li>Creating new modules according to the requirements.</li>
-                                        <li>Tech stack : Python / Odoo + Postgres + AWS</li>
-                                    </ul>
-                                </div>
-
-                                <div>
-                                    <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
-                                </div>
-                            </div>
-
-                            <!--==================== QUALIFICATION 2====================-->
-                            <div class="qualification__data">
-                                <div></div>
-
-                                <div>
-                                    <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
-                                </div>
-                                <div>
-                                    <h3 class="qualification__title">Founder</h3>
-                                    <a class="qualification__link" href="https://www.facebook.com/mgchatprogramming"><span class="qualification__subtitle">Mg Chat Programming</span></a>
-                                    <div class="qualification__calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        Oct 2020 - Present
-                                    </div>
-                                     <ul class="bullets">
-                                        <li>Share python tutorial videos.</li>
-                                        <li>Share python related articles</li>
-                                        <li>Share in native language for Myanmar people to understand easily.</li>
-                                     </ul>
-                                </div>
-                            </div>
-
-                             <!--==================== QUALIFICATION 3====================-->
-                            <div class="qualification__data">
-                                <div>
-                                    <h3 class="qualification__title">Freelance Developer</h3>
-                                    <span class="qualification__subtitle">Jan 2019 - Present</span>
-                                    <div class="qualification__calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        Jan 2019 - Present
-                                    </div>
-                                     <ul class="bullets">
-                                        <li>Embedded Projects</li>
-                                        <li>Python Projects</li>
-                                        <li>Web Scraping</li>
-                                     </ul>
-                                </div>
-
-                                <div>
-                                    <span class="qualification__rounder"></span>
-<!--                                    <span class="qualification__line"></span>-->
-                                </div>
-                            </div>
-                        </div>
-
-                         <!--==================== Certificates ====================-->
-                        <div class="qualification__content" data-content id="certificates">
-                            <!--==================== QUALIFICATION 1====================-->
-                            <div class="qualification__data">
-                                <div>
-                                    <h3 class="qualification__title">PCAP – Certified Associate in Python Programming</h3>
-                                    <a class="qualification__link" href="https://www.credly.com/organizations/python-institute/badges"><span class="qualification__subtitle">Python Institute</span></a>
-                                    <div class="qualification__calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        Issued Date: June 18, 2022
-                                    </div>
-                                     <div class="qualification__calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        Expired Date: -
-                                    </div>
-                                    <div class="qualification__certificate">
-                                        <i class="uil uil-file-bookmark-alt"></i>
-                                        <a class="qualification__link" href="https://www.credly.com/badges/6c690cfb-d090-4722-884e-fb767c7c3d03">Certificate</a>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
-                                </div>
-                            </div>
-
-
-                            <!--==================== QUALIFICATION 2====================-->
-                            <div class="qualification__data">
-                                <div></div>
-
-                                <div>
-                                    <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
-                                </div>
-                                <div>
-                                    <h3 class="qualification__title">AWS Certified Cloud Practitioner</h3>
-                                    <a class="qualification__link" href="https://www.credly.com/organizations/amazon-web-services/badges"><span class="qualification__subtitle">AWS Training and Certification</span></a>
-                                    <div class="qualification__calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        Issued Date: August 07, 2022
-                                    </div>
-                                     <div class="qualification__calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        Expired Date: August 07, 2025
-                                    </div>
-                                    <div class="qualification__certificate">
-                                        <i class="uil uil-file-bookmark-alt"></i>
-                                        <a class="qualification__link" href="https://www.credly.com/badges/bb8a77a2-34da-4963-80b4-a71d1203441c/public_url">Certificate</a>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                             <!--==================== QUALIFICATION 3====================-->
-                            <div class="qualification__data">
-                                <div>
-                                    <h3 class="qualification__title">AWS Machine Learning NanoDegree</h3>
-                                    <a class="qualification__link" href="https://www.udacity.com/"><span class="qualification__subtitle">Udacity</span></a>
-                                    <div class="qualification__calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        Issued Date: October 30, 2020
-                                    </div>
-                                     <div class="qualification__calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        Expired Date: -
-                                    </div>
-                                    <div class="qualification__certificate">
-                                        <i class="uil uil-file-bookmark-alt"></i>
-                                        <a class="qualification__link" href="https://confirm.udacity.com/ETMGDKP7">Certificate</a>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
-                                </div>
-                            </div>
-
-
-                            <!--==================== QUALIFICATION 4====================-->
-                            <div class="qualification__data">
-                                <div></div>
-
-                                <div>
-                                    <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
-                                </div>
-                                <div>
-                                    <h3 class="qualification__title">CS50's Web Programming with Python and JavasScript</h3>
-                                    <a class="qualification__link" href="https://cs50.harvard.edu/web/2020/"><span class="qualification__subtitle">Harvard CS50w</span></a>
-                                    <div class="qualification__calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        Issued Date: July 27, 2022
-                                    </div>
-                                     <div class="qualification__calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        Expired Date: -
-                                    </div>
-                                    <div class="qualification__certificate">
-                                        <i class="uil uil-file-bookmark-alt"></i>
-                                        <a class="qualification__link" href="https://certificates.cs50.io/9bc4588a-a406-4a8a-b767-4ab9d4551792.pdf?size=letter">Certificate</a>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <!--==================== QUALIFICATION 5====================-->
-                            <div class="qualification__data">
-                                <div>
-                                    <h3 class="qualification__title">Python for Everybody(Specialization)</h3>
-                                    <a class="qualification__link" href="https://www.coursera.org/"><span class="qualification__subtitle">Coursera(University of Michigan)</span></a>
-                                    <div class="qualification__calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        Issued Date: July 15, 2020
-                                    </div>
-                                     <div class="qualification__calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        Expired Date: -
-                                    </div>
-                                    <div class="qualification__certificate">
-                                        <i class="uil uil-file-bookmark-alt"></i>
-                                        <a class="qualification__link" href="https://coursera.org/share/51651fcecf0c18e1f1382cab2b805286">Certificate</a>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <span class="qualification__rounder"></span>
-<!--                                    <span class="qualification__line"></span>-->
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-            </section>
-
-
-            <!--==================== Projects ====================-->
-            <section class="portfolio section" id="projects">
-                <h2 class="section__title">Projects</h2>
-                <span class="section__subtitle">Featured Projects</span>
-
-                <div class="portfolio__container container swiper-container">
-                    <h3>Software Projects</h3>
-                    <div class="swiper-wrapper">
-                        <!--==================== PORTFOLIO 1 ====================-->
-                        <div class="portfolio__content grid swiper-slide">
-                            <img src="{% static 'img/portfolio1.jpg' %}" alt="" class="portfolio__img">
-
-                            <div class="portfolio__data">
-                                <div class="portfolio__header">
-                                    <h3 class="portfolio__title">Modern Website fghg dfhg  hfdh fd hdfhg</h3>
-                                    <div class="project__link">
-
-                                         <a href="#" target="_blank" class="project__link-icon">
-                                            <i class="uil uil-globe"></i>
-
-                                        </a>
-                                        <a href="#" target="_blank" class="project__link-icon">
-                                            <i class="uil uil-github-alt"></i>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <p class="portfolio__description">
-                                    Website adaptable to all devices, with ui components and animated interactions.
-                                    Website adaptable to all devices, with ui components and animated interactions.
-                                    Website adaptable to all devices, with ui components and animated interactions.
-                                </p>
-
-                                <div class="tech-stack-container">
-                                    <span class="tech-stack">HTML</span>
-                                    <span class="tech-stack">Javascript</span>
-                                    <span class="tech-stack">Python</span>
-                                    <span class="tech-stack">Laravel</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--==================== PORTFOLIO 2 ====================-->
-                        <div class="portfolio__content grid swiper-slide">
-                            <img src="{% static 'img/portfolio2.jpg' %}" alt="" class="portfolio__img">
-
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">Brand Design</h3>
-                                <p class="portfolio__description">
-                                    Website adaptable to all devices, with ui components and animated interactions.
-                                </p>
-                                <a href="#" class="button button--flex button--small portfolio__button">
-                                    Demo
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!--==================== PORTFOLIO 3 ====================-->
-                        <div class="portfolio__content grid swiper-slide">
-                            <img src="{% static 'img/portfolio3.jpg' %}" alt="" class="portfolio__img">
-
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">Online Store</h3>
-                                <p class="portfolio__description">
-                                    Website adaptable to all devices, with ui components and animated interactions.
-                                </p>
-                                <a href="#" class="button button--flex button--small portfolio__button">
-                                    Demo
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- Add Arrows -->
-                    <div class="swiper-button-next">
-                        <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-                    </div>
-                    <div class="swiper-button-prev">
-                        <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-                    </div>
-
-                     <!-- Add Pagination -->
-                     <div class="swiper-pagination"></div>
-                </div>
-
-
-                <div class="portfolio__container container swiper-container">
-                    <h3>Embedded Projects</h3>
-                    <div class="swiper-wrapper">
-                        <!--==================== PORTFOLIO 1 ====================-->
-                        <div class="portfolio__content grid swiper-slide">
-                            <iframe class="portfolio__img" src="https://www.youtube.com/embed/SuSdwEW9800" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-                            <div class="portfolio__data">
-                                <div class="portfolio__header">
-                                    <h3 class="portfolio__title">Modern Website fghg dfhg  hfdh fd hdfhg</h3>
-                                    <div class="project__link">
-
-                                         <a href="#" target="_blank" class="project__link-icon">
-                                            <i class="uil uil-globe"></i>
-
-                                        </a>
-                                        <a href="#" target="_blank" class="project__link-icon">
-                                            <i class="uil uil-github-alt"></i>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <p class="portfolio__description">
-                                    Website adaptable to all devices, with ui components and animated interactions.
-                                    Website adaptable to all devices, with ui components and animated interactions.
-                                    Website adaptable to all devices, with ui components and animated interactions.
-                                </p>
-
-                                <div class="tech-stack-container">
-                                    <span class="tech-stack">HTML</span>
-                                    <span class="tech-stack">Javascript</span>
-                                    <span class="tech-stack">Python</span>
-                                    <span class="tech-stack">Laravel</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--==================== PORTFOLIO 2 ====================-->
-                        <div class="portfolio__content grid swiper-slide">
-                            <iframe class="portfolio__img" src="https://www.youtube.com/embed/qrWc7qapw8w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">Brand Design</h3>
-                                <p class="portfolio__description">
-                                    Website adaptable to all devices, with ui components and animated interactions.
-                                </p>
-                                <a href="#" class="button button--flex button--small portfolio__button">
-                                    Demo
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!--==================== PORTFOLIO 3 ====================-->
-                        <div class="portfolio__content grid swiper-slide">
-                            <iframe  class="portfolio__img" src="https://www.youtube.com/embed/uUhM6Nzlb60" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">Online Store</h3>
-                                <p class="portfolio__description">
-                                    Website adaptable to all devices, with ui components and animated interactions.
-                                </p>
-                                <a href="#" class="button button--flex button--small portfolio__button">
-                                    Demo
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- Add Arrows -->
-                    <div class="swiper-button-next">
-                        <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-                    </div>
-                    <div class="swiper-button-prev">
-                        <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-                    </div>
-
-                     <!-- Add Pagination -->
-                     <div class="swiper-pagination"></div>
-                </div>
-            </section>
-
-
-            <!--==================== Blog====================-->
-            <section class="blog section" id="blog">
-                <h2 class="section__title">Blog</h2>
-                <span class="section__subtitle">Blog</span>
-
-                <div class="blog__container container swiper-container">
-                    <div class="swiper-wrapper">
-                        <!--==================== Blog 1 ====================-->
-                        <div class="blog__wrapper swiper-slide">
-                            <div class="blog__banner">
-                                <img src="{% static 'img/portfolio3.jpg' %}" alt="">
-                            </div>
-                            <a class="blog__name">What is Python Myanmar? I am from Myanmar?</a>
-                            <div class="blog__content">
-                                <p class="line-clamp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci eius esse eveniet harum ipsam ipsum, maiores nostrum optio quo sapiente. Cupiditate doloribus eum ex inventore laudantium nam omnis ut vero.
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci eius esse eveniet harum ipsam ipsum, maiores nostrum optio quo sapiente. Cupiditate doloribus eum ex inventore laudantium nam omnis ut vero.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!--==================== Blog 2 ====================-->
-                        <div class="blog__wrapper swiper-slide">
-                            <div class="blog__banner">
-                                <img src="{% static 'img/portfolio3.jpg' %}" alt="">
-                            </div>
-                            <a class="blog__name">What is Python Myanmar? I am from Myanmar?</a>
-                            <div class="blog__content">
-                                <p class="line-clamp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci eius esse eveniet harum ipsam ipsum, maiores nostrum optio quo sapiente. Cupiditate doloribus eum ex inventore laudantium nam omnis ut vero.
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci eius esse eveniet harum ipsam ipsum, maiores nostrum optio quo sapiente. Cupiditate doloribus eum ex inventore laudantium nam omnis ut vero.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!--==================== Blog 3 ====================-->
-                        <div class="blog__wrapper swiper-slide">
-                            <div class="blog__banner">
-                                <img src="{% static 'img/portfolio3.jpg' %}" alt="">
-                            </div>
-                            <a class="blog__name">What is Python Myanmar? I am from Myanmar?</a>
-                             <div class="qualification__calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        2009 - 2014
-                                    </div>
-                            <div class="blog__content">
-                                <p class="line-clamp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci eius esse eveniet harum ipsam ipsum, maiores nostrum optio quo sapiente. Cupiditate doloribus eum ex inventore laudantium nam omnis ut vero.
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci eius esse eveniet harum ipsam ipsum, maiores nostrum optio quo sapiente. Cupiditate doloribus eum ex inventore laudantium nam omnis ut vero.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Add Arrows -->
-                    <div class="swiper-button-next">
-                        <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-                    </div>
-                    <div class="swiper-button-prev">
-                        <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-                    </div>
-
-                     <!-- Add Pagination -->
-                     <div class="swiper-pagination"></div>
-                </div>
-            </section>
-
-            <!--==================== Achievements ====================-->
-            <section class="portfolio section" id="achievement">
-                <h2 class="section__title">Achievements</h2>
-                <span class="section__subtitle">Competitions</span>
-
-                <div class="portfolio__container container swiper-container">
-                    <div class="swiper-wrapper">
-                        <!--==================== PORTFOLIO 1 ====================-->
-                        <div class="portfolio__content grid swiper-slide">
-                            <img src="{% static 'img/Robotians1.jpg' %}" alt="" class="portfolio__img">
-
-                            <div class="portfolio__data">
-                                <div class="portfolio__header">
-                                    <h3 class="portfolio__title">ROBOTIANS</h3>
-                                </div>
-
-                                <p class="portfolio__description">
-                                    Website adaptable to all devices, with ui components and animated interactions.
-                                    Website adaptable to all devices, with ui components and animated interactions.
-                                    Website adaptable to all devices, with ui components and animated interactions.
-                                </p>
-
-                            </div>
-                        </div>
-
-                        <!--==================== PORTFOLIO 2 ====================-->
-                        <div class="portfolio__content grid swiper-slide">
-                            <img src="{% static 'img/Robotians2.jpg' %}" alt="" class="portfolio__img">
-
-                            <div class="portfolio__data">
-                                <div class="portfolio__header">
-                                    <h3 class="portfolio__title">Modern Website fghg dfhg  hfdh fd hdfhg</h3>
-                                </div>
-
-                                <p class="portfolio__description">
-                                    Website adaptable to all devices, with ui components and animated interactions.
-                                    Website adaptable to all devices, with ui components and animated interactions.
-                                    Website adaptable to all devices, with ui components and animated interactions.
-                                </p>
-
-                            </div>
-                        </div>
-
-                        <!--==================== PORTFOLIO 3 ====================-->
-                        <div class="portfolio__content grid swiper-slide">
-                            <img src="{% static 'img/Robotians3.jpg' %}" alt="" class="portfolio__img">
-
-                            <div class="portfolio__data">
-                                <div class="portfolio__header">
-                                    <h3 class="portfolio__title">Modern Website fghg dfhg  hfdh fd hdfhg</h3>
-                                </div>
-
-                                <p class="portfolio__description">
-                                    Website adaptable to all devices, with ui components and animated interactions.
-                                    Website adaptable to all devices, with ui components and animated interactions.
-                                    Website adaptable to all devices, with ui components and animated interactions.
-                                </p>
-
-                            </div>
-                        </div>
-
-                        <!--==================== PORTFOLIO 4 ====================-->
-                        <div class="portfolio__content grid swiper-slide">
-                            <img src="{% static 'img/COR2.1.jpg' %}" alt="" class="portfolio__img">
-
-                            <div class="portfolio__data">
-                                <div class="portfolio__header">
-                                    <h3 class="portfolio__title">Modern Website fghg dfhg  hfdh fd hdfhg</h3>
-                                </div>
-
-                                <p class="portfolio__description">
-                                    Website adaptable to all devices, with ui components and animated interactions.
-                                    Website adaptable to all devices, with ui components and animated interactions.
-                                    Website adaptable to all devices, with ui components and animated interactions.
-                                </p>
-
-                            </div>
-                        </div>
-
-                        <!--==================== PORTFOLIO 5 ====================-->
-                        <div class="portfolio__content grid swiper-slide">
-                            <img src="{% static 'img/COR2.2.jpg' %}" alt="" class="portfolio__img">
-
-                            <div class="portfolio__data">
-                                <div class="portfolio__header">
-                                    <h3 class="portfolio__title">Modern Website fghg dfhg  hfdh fd hdfhg</h3>
-                                </div>
-
-                                <p class="portfolio__description">
-                                    Website adaptable to all devices, with ui components and animated interactions.
-                                    Website adaptable to all devices, with ui components and animated interactions.
-                                    Website adaptable to all devices, with ui components and animated interactions.
-                                </p>
-
-                            </div>
-                        </div>
-
-                        <!--==================== PORTFOLIO 6 ====================-->
-                        <div class="portfolio__content grid swiper-slide">
-                            <img src="{% static 'img/COR2.3.jpg' %}assets/" alt="" class="portfolio__img">
-
-                            <div class="portfolio__data">
-                                <div class="portfolio__header">
-                                    <h3 class="portfolio__title">Modern Website fghg dfhg  hfdh fd hdfhg</h3>
-                                </div>
-
-                                <p class="portfolio__description">
-                                    Website adaptable to all devices, with ui components and animated interactions.
-                                    Website adaptable to all devices, with ui components and animated interactions.
-                                    Website adaptable to all devices, with ui components and animated interactions.
-                                </p>
-
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- Add Arrows -->
-                    <div class="swiper-button-next">
-                        <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-                    </div>
-                    <div class="swiper-button-prev">
-                        <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-                    </div>
-
-                     <!-- Add Pagination -->
-                     <div class="swiper-pagination"></div>
-                </div>
-
-            </section>
-
-        </main>
-
-        <!--==================== FOOTER ====================-->
-        <footer class="footer">
-            <div class="footer__bg">
-                <div class="footer__container container grid">
-                    <div>
-                        <h1 class="footer__title">Pyae Phyo Kyaw</h1>
-                        <span class="footer__subtitle">Software Developer</span>
-                    </div>
-
-                    <ul class="footer__links">
-                        <li>
-                            <a href="#qualification" class="footer__link">Qualification</a>
-                        </li>
-                        <li>
-                            <a href="#projects" class="footer__link">Projects</a>
-                        </li>
-                        <li>
-                            <a href="#blog" class="footer__link">Blog</a>
-                        </li>
-                    </ul>
-
-                    <div class="footer__socials">
-                        <a href="https://www.facebook.com/pyaephyokyaw157/" class="footer__social" target="_blank">
-                            <i class="uil uil-facebook-f"></i>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#qualification" class="nav__link">
+                            <i class="uil uil-file-alt nav__icon"></i>Qualification
                         </a>
-                        <a href="https://github.com/pyaephyokyaw15" target="_blank" class="footer__social">
-                            <i class="uil uil-github-alt"></i>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#projects" class="nav__link">
+                            <i class="uil uil-scenery nav__icon"></i>Projects
                         </a>
-                        <a href="https://www.linkedin.com/in/pyae-phyo-kyaw-a925a21a9/" target="_blank" class="footer__social">
+                    </li>
+                    <li class="nav__item">
+                        <a href="#blog" class="nav__link">
+                            <i class="uil uil-message nav__icon"></i>Blog
+                        </a>
+                    </li>
+                </ul>
+
+                <i class="uil uil-times nav__close" id="nav-close"></i>
+            </div>
+
+            <div class="nav__btns">
+                <!-- Theme change button -->
+                <i class="uil uil-moon change-theme" id="theme-button"></i>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="uil uil-apps"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div class="home__content grid">
+                    <div class="home__social">
+                        <a href="https://www.linkedin.com/in/pyae-phyo-kyaw-a925a21a9/" target="_blank" class="home__social-icon">
                             <i class="uil uil-linkedin-alt"></i>
                         </a>
+                        <a href="https://github.com/pyaephyokyaw15" target="_blank" class="home__social-icon">
+                            <i class="uil uil-github-alt"></i>
+                        </a>
+                        <a href="mailto:pyaekyaw1571999@gmail.com" target="_blank" class="home__social-icon">
+                            <i class="uil uil-envelope-alt"></i>
+                        </a>
+                    </div>
+
+                    <div class="home__img">
+                        <img class="home__blob-img" src="{% static 'img/profile1.jpg' %}" alt="Profile Picture">
+                    </div>
+
+                    <div class="home__data">
+                        <h3>Hello, I'm</h3>
+                        <h1 class="home__title">Pyae Phyo Kyaw</h1>
+                        <h3 class="home__subtitle">Software Developer</h3>
+                        <p class="home__description">
+                            A passionate software developer with 3+ years' experience in software development.
+                            Specialized in Backend Development(Python Stack).
+                        </p>
+                        <a href="mailto:pyaekyaw1571999@gmail.com" class="button button--flex">
+                            Contact Me<i class="uil uil-message button__icon"></i>
+                        </a>
                     </div>
                 </div>
 
-                <p class="footer__copy">&#169; pyaephyokyaw. All right reserved</p>
+                <div class="home__scroll">
+                    <a href="#qualification" class="home__scroll-button button--flex">
+                        <i class="uil uil-mouse-alt home__scroll-mouse"></i>
+                        <span class="home__scroll-name">Scroll down</span>
+                        <i class="uil uil-arrow-down home__scroll-arrow"></i>
+                    </a>
+                </div>
             </div>
-        </footer>
+        </section>
 
-        <!--==================== SCROLL TOP ====================-->
-        <a href="#" class="scrollup" id="scroll-up">
-            <i class="uil uil-arrow-up scrollup__icon"></i>
-        </a>
 
-        <!--==================== SWIPER JS ====================-->
-        <script src="{% static 'js/swiper-bundle.min.js' %}"></script>
+        <!--==================== QUALIFICATION ====================-->
+        <section class="qualification section" id="qualification">
+            <h2 class="section__title">Qualification</h2>
+            <span class="section__subtitle">My personal journey</span>
 
-        <!--==================== MAIN JS ====================-->
-        <script src="{% static 'js/main.js' %}"></script>
-    </body>
-</html>
+            <div class="qualification__container container">
+                <div class="qualification__tabs">
+                    <div class="qualification__button button--flex qualification__active" data-target="#education">
+                        <i class="uil uil-graduation-cap qualification__icon"></i>
+                        Education
+                    </div>
+                    <div class="qualification__button button--flex" data-target="#work">
+                        <i class="uil uil-suitcase qualification__icon"></i>
+                        Work
+                    </div>
+                    <div class="qualification__button button--flex" data-target="#certificates">
+                        <i class="uil uil-file-bookmark-alt qualification__icon"></i>
+                        Certificates
+                    </div>
+                </div>
+
+                <div class="qualification__sections">
+                    <!--==================== Education ====================-->
+                    <div class="qualification__content qualification__active" data-content id="education">
+                        <!--==================== QUALIFICATION 1====================-->
+                        <div class="qualification__data">
+                            <div>
+                                <h3 class="qualification__title">Computer Science  (Bachelor's Degree)</h3>
+                                <a class="qualification__link" href="https://www.uopeople.edu/"><span class="qualification__subtitle">University of the People</span></a>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    Nov 2021 - Present
+                                </div>
+
+                                <ul class="bullets">
+                                    <li>Algorithm and Data structure</li>
+                                    <li>Database Design</li>
+                                    <li>Artificial Intelligence</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+                        </div>
+
+                        <!--==================== QUALIFICATION 2====================-->
+                        <div class="qualification__data">
+                            <div></div>
+
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+                            <div>
+                                <h3 class="qualification__title">Bachelor of Engineering  (Mechatronic)</h3>
+                                <a class="qualification__link" href="https://www.linkedin.com/school/mandalay-technological-university-mtu/"><span class="qualification__subtitle">Mandalay Technological University</span></a>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    Dec 2015 - March 2020
+                                </div>
+
+                                <div class="qualification__note">
+                                    Our university is Rank-2 Technological University in our country, Myanmar.
+                                    My study is currently suspended due to the Covid outbreak and political affairs in Myanmar.
+                                </div>
+
+                                <ul class="bullets">
+                                    <li>Robotics</li>
+                                    <li>Automation Engineering</li>
+                                    <li>Artificial Intelligence</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                         <!--==================== QUALIFICATION 3====================-->
+                        <div class="qualification__data">
+                            <div>
+                                <h3 class="qualification__title">AWS Machine Learning NanoDegree</h3>
+                                <a class="qualification__link" href="https://www.udacity.com/"><span class="qualification__subtitle">Udacity</span></a>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    Jul 2020 - Oct 2020
+                                </div>
+                                <div class="qualification__note">
+                                   I won scholarship for this NanoDegree. This scholarship program chose 325 out of all applicants all over the world according to the foundation course results.
+                                </div>
+
+                                 <ul class="bullets">
+                                    <li>Machine Learning</li>
+                                    <li>AWS Services</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <span class="qualification__rounder"></span>
+    <!--                                    <span class="qualification__line"></span>-->
+                            </div>
+                        </div>
+                    </div>
+
+                     <!--==================== Work ====================-->
+                    <div class="qualification__content" data-content id="work">
+                        <!--==================== QUALIFICATION 1====================-->
+                        <div class="qualification__data">
+                            <div>
+                                <h3 class="qualification__title">Software Developer</h3>
+                                <a class="qualification__link" href="https://liveplaza.online/"><span class="qualification__subtitle">SSP Ventures Myanmar</span></a>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    Dec 2021 - Present
+                                </div>
+                                <ul class="bullets">
+                                    <li><a class="qualification__link" href="https://liveplaza.online/">LIVEPlaza</a> - Multi-vendor Online Market Platform</li>
+                                    <li>Responsible for upgrading the existing modules</li>
+                                    <li>Creating new modules according to the requirements.</li>
+                                    <li>Tech stack : Python / Odoo + Postgres + AWS</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+                        </div>
+
+                        <!--==================== QUALIFICATION 2====================-->
+                        <div class="qualification__data">
+                            <div></div>
+
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+                            <div>
+                                <h3 class="qualification__title">Founder</h3>
+                                <a class="qualification__link" href="https://www.facebook.com/mgchatprogramming"><span class="qualification__subtitle">Mg Chat Programming</span></a>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    Oct 2020 - Present
+                                </div>
+                                 <ul class="bullets">
+                                    <li>Share python tutorial videos.</li>
+                                    <li>Share python related articles</li>
+                                    <li>Share in native language for Myanmar people to understand easily.</li>
+                                 </ul>
+                            </div>
+                        </div>
+
+                         <!--==================== QUALIFICATION 3====================-->
+                        <div class="qualification__data">
+                            <div>
+                                <h3 class="qualification__title">Freelance Developer</h3>
+                                <span class="qualification__subtitle">Jan 2019 - Present</span>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    Jan 2019 - Present
+                                </div>
+                                 <ul class="bullets">
+                                    <li>Embedded Projects</li>
+                                    <li>Python Projects</li>
+                                    <li>Web Scraping</li>
+                                 </ul>
+                            </div>
+
+                            <div>
+                                <span class="qualification__rounder"></span>
+    <!--                                    <span class="qualification__line"></span>-->
+                            </div>
+                        </div>
+                    </div>
+
+                     <!--==================== Certificates ====================-->
+                    <div class="qualification__content" data-content id="certificates">
+                        <!--==================== QUALIFICATION 1====================-->
+                        <div class="qualification__data">
+                            <div>
+                                <h3 class="qualification__title">PCAP – Certified Associate in Python Programming</h3>
+                                <a class="qualification__link" href="https://www.credly.com/organizations/python-institute/badges"><span class="qualification__subtitle">Python Institute</span></a>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    Issued Date: June 18, 2022
+                                </div>
+                                 <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    Expired Date: -
+                                </div>
+                                <div class="qualification__certificate">
+                                    <i class="uil uil-file-bookmark-alt"></i>
+                                    <a class="qualification__link" href="https://www.credly.com/badges/6c690cfb-d090-4722-884e-fb767c7c3d03">Certificate</a>
+                                </div>
+                            </div>
+
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+                        </div>
+
+
+                        <!--==================== QUALIFICATION 2====================-->
+                        <div class="qualification__data">
+                            <div></div>
+
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+                            <div>
+                                <h3 class="qualification__title">AWS Certified Cloud Practitioner</h3>
+                                <a class="qualification__link" href="https://www.credly.com/organizations/amazon-web-services/badges"><span class="qualification__subtitle">AWS Training and Certification</span></a>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    Issued Date: August 07, 2022
+                                </div>
+                                 <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    Expired Date: August 07, 2025
+                                </div>
+                                <div class="qualification__certificate">
+                                    <i class="uil uil-file-bookmark-alt"></i>
+                                    <a class="qualification__link" href="https://www.credly.com/badges/bb8a77a2-34da-4963-80b4-a71d1203441c/public_url">Certificate</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                         <!--==================== QUALIFICATION 3====================-->
+                        <div class="qualification__data">
+                            <div>
+                                <h3 class="qualification__title">AWS Machine Learning NanoDegree</h3>
+                                <a class="qualification__link" href="https://www.udacity.com/"><span class="qualification__subtitle">Udacity</span></a>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    Issued Date: October 30, 2020
+                                </div>
+                                 <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    Expired Date: -
+                                </div>
+                                <div class="qualification__certificate">
+                                    <i class="uil uil-file-bookmark-alt"></i>
+                                    <a class="qualification__link" href="https://confirm.udacity.com/ETMGDKP7">Certificate</a>
+                                </div>
+                            </div>
+
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+                        </div>
+
+
+                        <!--==================== QUALIFICATION 4====================-->
+                        <div class="qualification__data">
+                            <div></div>
+
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+                            <div>
+                                <h3 class="qualification__title">CS50's Web Programming with Python and JavasScript</h3>
+                                <a class="qualification__link" href="https://cs50.harvard.edu/web/2020/"><span class="qualification__subtitle">Harvard CS50w</span></a>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    Issued Date: July 27, 2022
+                                </div>
+                                 <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    Expired Date: -
+                                </div>
+                                <div class="qualification__certificate">
+                                    <i class="uil uil-file-bookmark-alt"></i>
+                                    <a class="qualification__link" href="https://certificates.cs50.io/9bc4588a-a406-4a8a-b767-4ab9d4551792.pdf?size=letter">Certificate</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!--==================== QUALIFICATION 5====================-->
+                        <div class="qualification__data">
+                            <div>
+                                <h3 class="qualification__title">Python for Everybody(Specialization)</h3>
+                                <a class="qualification__link" href="https://www.coursera.org/"><span class="qualification__subtitle">Coursera(University of Michigan)</span></a>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    Issued Date: July 15, 2020
+                                </div>
+                                 <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    Expired Date: -
+                                </div>
+                                <div class="qualification__certificate">
+                                    <i class="uil uil-file-bookmark-alt"></i>
+                                    <a class="qualification__link" href="https://coursera.org/share/51651fcecf0c18e1f1382cab2b805286">Certificate</a>
+                                </div>
+                            </div>
+
+                            <div>
+                                <span class="qualification__rounder"></span>
+    <!--                                    <span class="qualification__line"></span>-->
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!--==================== Projects ====================-->
+        <section class="portfolio section" id="projects">
+            <h2 class="section__title">Projects</h2>
+            <span class="section__subtitle">Featured Projects</span>
+
+            <div class="portfolio__container container swiper-container">
+                <h3>Software Projects</h3>
+                <div class="swiper-wrapper">
+                    <!--==================== PORTFOLIO 1 ====================-->
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="{% static 'img/portfolio1.jpg' %}" alt="" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <div class="portfolio__header">
+                                <h3 class="portfolio__title">Modern Website fghg dfhg  hfdh fd hdfhg</h3>
+                                <div class="project__link">
+
+                                     <a href="#" target="_blank" class="project__link-icon">
+                                        <i class="uil uil-globe"></i>
+
+                                    </a>
+                                    <a href="#" target="_blank" class="project__link-icon">
+                                        <i class="uil uil-github-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <p class="portfolio__description">
+                                Website adaptable to all devices, with ui components and animated interactions.
+                                Website adaptable to all devices, with ui components and animated interactions.
+                                Website adaptable to all devices, with ui components and animated interactions.
+                            </p>
+
+                            <div class="tech-stack-container">
+                                <span class="tech-stack">HTML</span>
+                                <span class="tech-stack">Javascript</span>
+                                <span class="tech-stack">Python</span>
+                                <span class="tech-stack">Laravel</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--==================== PORTFOLIO 2 ====================-->
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="{% static 'img/portfolio2.jpg' %}" alt="" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">Brand Design</h3>
+                            <p class="portfolio__description">
+                                Website adaptable to all devices, with ui components and animated interactions.
+                            </p>
+                            <a href="#" class="button button--flex button--small portfolio__button">
+                                Demo
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--==================== PORTFOLIO 3 ====================-->
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="{% static 'img/portfolio3.jpg' %}" alt="" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">Online Store</h3>
+                            <p class="portfolio__description">
+                                Website adaptable to all devices, with ui components and animated interactions.
+                            </p>
+                            <a href="#" class="button button--flex button--small portfolio__button">
+                                Demo
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Add Arrows -->
+                <div class="swiper-button-next">
+                    <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+                </div>
+
+                 <!-- Add Pagination -->
+                 <div class="swiper-pagination"></div>
+            </div>
+
+
+            <div class="portfolio__container container swiper-container">
+                <h3>Embedded Projects</h3>
+                <div class="swiper-wrapper">
+                    <!--==================== PORTFOLIO 1 ====================-->
+                    <div class="portfolio__content grid swiper-slide">
+                        <iframe class="portfolio__img" src="https://www.youtube.com/embed/SuSdwEW9800" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                        <div class="portfolio__data">
+                            <div class="portfolio__header">
+                                <h3 class="portfolio__title">Maze Solver Robot</h3>
+                            </div>
+
+                            <p class="portfolio__description">
+                                This project is for robot competition(ROBOTIANS). This robot can solve the maze and place the blocks in colored area automatically.(In this video, there is no block in upper block-case. So, no block is dropped.)
+                            </p>
+
+                            <div class="tech-stack-container">
+                                <span class="tech-stack">Arduino</span>
+                                <span class="tech-stack">C / C++</span>
+                                <span class="tech-stack">PID Control</span>
+                                <span class="tech-stack">Electronics</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--==================== PORTFOLIO 2 ====================-->
+                    <div class="portfolio__content grid swiper-slide">
+                        <iframe class="portfolio__img" src="https://www.youtube.com/embed/qrWc7qapw8w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">Line Follower Robot</h3>
+                            <p class="portfolio__description">
+                                This robot can follow the given path automatically. (In this video, phone is used as a timer.)
+                            </p>
+                             <div class="tech-stack-container">
+                                <span class="tech-stack">Arduino</span>
+                                <span class="tech-stack">C / C++</span>
+                                <span class="tech-stack">PID Control</span>
+                                <span class="tech-stack">Electronics</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--==================== PORTFOLIO 3 ====================-->
+                    <div class="portfolio__content grid swiper-slide">
+                        <iframe  class="portfolio__img" src="https://www.youtube.com/embed/uUhM6Nzlb60" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">Self Balancing Robot</h3>
+                            <p class="portfolio__description">
+                                This two-wheels robot can balance itself and move automatically.
+                                It can also be controlled by mobile phone for movement.
+                                (This video was recorded during the competition. The rule is to balance and find the four sides.)
+                            </p>
+                            <div class="tech-stack-container">
+                                <span class="tech-stack">Arduino</span>
+                                <span class="tech-stack">C / C++</span>
+                                <span class="tech-stack">PID Control</span>
+                                <span class="tech-stack">Electronics</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Add Arrows -->
+                <div class="swiper-button-next">
+                    <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+                </div>
+
+                 <!-- Add Pagination -->
+                 <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+
+        <!--==================== Blog====================-->
+        <section class="blog section" id="blog">
+            <h2 class="section__title">Blog</h2>
+            <span class="section__subtitle">Share my experience and knowledge</span>
+
+            <div class="blog__container container swiper-container">
+                <div class="swiper-wrapper" style="padding: 1rem;">
+                    {% for post in posts %}
+
+                        <a class="blog__wrapper swiper-slide" href="{{ post.get_absolute_url }}" target="_blank">
+                            <div class="blog__banner">
+                                <img src="{{ post.banner.url }}" alt="">
+                            </div>
+                            <p class="blog__name line-clamp-1">{{ post.title }}</p>
+                            <div class="qualification__calendar">
+                                <i class="uil uil-calendar-alt"></i>
+                                {{ post.date_posted }}
+                            </div>
+                            <div class="blog__content">
+                                <p class="line-clamp-5">
+                                    {{ post.body }}
+                                </p>
+                            </div>
+                        </a>
+
+                    {% endfor %}
+                </div>
+
+                <!-- Add Arrows -->
+                <div class="swiper-button-next">
+                    <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+                </div>
+
+                 <!-- Add Pagination -->
+                 <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <!--==================== Achievements ====================-->
+        <section class="portfolio section" id="achievement">
+            <h2 class="section__title">Achievements</h2>
+            <span class="section__subtitle">Competitions</span>
+
+            <div class="portfolio__container container swiper-container">
+                <div class="swiper-wrapper">
+                    <!--==================== PORTFOLIO 1 ====================-->
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="{% static 'img/Robotians1.jpg' %}" alt="" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <div class="portfolio__header">
+                                <h3 class="portfolio__title">ROBOTIANS</h3>
+                            </div>
+
+                            <p class="portfolio__description">
+                                Website adaptable to all devices, with ui components and animated interactions.
+                                Website adaptable to all devices, with ui components and animated interactions.
+                                Website adaptable to all devices, with ui components and animated interactions.
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <!--==================== PORTFOLIO 2 ====================-->
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="{% static 'img/Robotians2.jpg' %}" alt="" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <div class="portfolio__header">
+                                <h3 class="portfolio__title">Modern Website fghg dfhg  hfdh fd hdfhg</h3>
+                            </div>
+
+                            <p class="portfolio__description">
+                                Website adaptable to all devices, with ui components and animated interactions.
+                                Website adaptable to all devices, with ui components and animated interactions.
+                                Website adaptable to all devices, with ui components and animated interactions.
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <!--==================== PORTFOLIO 3 ====================-->
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="{% static 'img/Robotians3.jpg' %}" alt="" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <div class="portfolio__header">
+                                <h3 class="portfolio__title">Modern Website fghg dfhg  hfdh fd hdfhg</h3>
+                            </div>
+
+                            <p class="portfolio__description">
+                                Website adaptable to all devices, with ui components and animated interactions.
+                                Website adaptable to all devices, with ui components and animated interactions.
+                                Website adaptable to all devices, with ui components and animated interactions.
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <!--==================== PORTFOLIO 4 ====================-->
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="{% static 'img/COR2.1.jpg' %}" alt="" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <div class="portfolio__header">
+                                <h3 class="portfolio__title">Modern Website fghg dfhg  hfdh fd hdfhg</h3>
+                            </div>
+
+                            <p class="portfolio__description">
+                                Website adaptable to all devices, with ui components and animated interactions.
+                                Website adaptable to all devices, with ui components and animated interactions.
+                                Website adaptable to all devices, with ui components and animated interactions.
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <!--==================== PORTFOLIO 5 ====================-->
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="{% static 'img/COR2.2.jpg' %}" alt="" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <div class="portfolio__header">
+                                <h3 class="portfolio__title">Modern Website fghg dfhg  hfdh fd hdfhg</h3>
+                            </div>
+
+                            <p class="portfolio__description">
+                                Website adaptable to all devices, with ui components and animated interactions.
+                                Website adaptable to all devices, with ui components and animated interactions.
+                                Website adaptable to all devices, with ui components and animated interactions.
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <!--==================== PORTFOLIO 6 ====================-->
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="{% static 'img/COR2.3.jpg' %}assets/" alt="" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <div class="portfolio__header">
+                                <h3 class="portfolio__title">Modern Website fghg dfhg  hfdh fd hdfhg</h3>
+                            </div>
+
+                            <p class="portfolio__description">
+                                Website adaptable to all devices, with ui components and animated interactions.
+                                Website adaptable to all devices, with ui components and animated interactions.
+                                Website adaptable to all devices, with ui components and animated interactions.
+                            </p>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Add Arrows -->
+                <div class="swiper-button-next">
+                    <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+                </div>
+
+                 <!-- Add Pagination -->
+                 <div class="swiper-pagination"></div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+        <div class="footer__bg">
+            <div class="footer__container container2 grid">
+                <div>
+                    <h1 class="footer__title">Pyae Phyo Kyaw</h1>
+                    <span class="footer__subtitle">Software Developer</span>
+                </div>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="#qualification" class="footer__link">Qualification</a>
+                    </li>
+                    <li>
+                        <a href="#projects" class="footer__link">Projects</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'blog:blog-home' %}" class="footer__link">Blog</a>
+                    </li>
+                </ul>
+
+                <div class="footer__socials">
+                    <a href="https://www.facebook.com/pyaephyokyaw157/" class="footer__social" target="_blank">
+                        <i class="uil uil-facebook-f"></i>
+                    </a>
+                    <a href="https://github.com/pyaephyokyaw15" target="_blank" class="footer__social">
+                        <i class="uil uil-github-alt"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/pyae-phyo-kyaw-a925a21a9/" target="_blank" class="footer__social">
+                        <i class="uil uil-linkedin-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169; pyaephyokyaw. All right reserved</p>
+        </div>
+    </footer>
+
+    <!--==================== SCROLL TOP ====================-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
+{% endblock %}

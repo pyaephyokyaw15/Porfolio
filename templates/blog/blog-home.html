@@ -1,0 +1,66 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block main %}
+     <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container2">
+            <a href="{% url 'blog:blog-home' %}" class="nav__logo">Blog</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list grid">
+                    <li class="nav__item">
+                        <a href="{% url 'blog:posts' %}" class="nav__link  active-link">
+                            <i class="uil uil-estate nav__icon"></i>All posts
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="{% url 'home' %}" class="nav__link">
+                            <i class="uil uil-file-alt nav__icon"></i>Portfolio
+                        </a>
+                    </li>
+                </ul>
+
+                <i class="uil uil-times nav__close" id="nav-close"></i>
+            </div>
+
+            <div class="nav__btns">
+                <!-- Theme change button -->
+                <i class="uil uil-moon change-theme" id="theme-button"></i>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="uil uil-apps"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+
+        <section class="section">
+             <h2 class="section__title">Blog</h2>
+            <span class="section__subtitle">Share my knowledge and experience</span>
+            <div class="blog-page-wrapper grid container2">
+                {% for post in posts %}
+                <a class="blog-container" href="{{ post.get_absolute_url }}">
+                    <div class="blog__banner">
+                        <img src="{{ post.banner.url }}" alt="">
+                    </div>
+                    <p class="blog__name line-clamp-1">{{ post.title }}</p>
+                    <div class="qualification__calendar">
+                        <i class="uil uil-calendar-alt"></i>
+                        {{ post.date_posted }}
+                    </div>
+                    <div class="blog__content">
+                        <p class="line-clamp-5">{{ post.body }}</p>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </section>
+
+    </main>
+
+
+{% endblock %}

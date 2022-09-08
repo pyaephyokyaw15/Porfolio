@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+    {% load static %}
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Pyae Phyo Kyaw | Portfolio</title>
+
+        <!--==================== UNICONS ====================-->
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+        <!--==================== SWIPER CSS ===================-->
+        <link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}">
+
+        <!--==================== CUSTOM CSS ====================-->
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    </head>
+    <body>
+        <!--==================== MAIN BLOCK ====================-->
+        {% block main %}
+        {% endblock %}
+
+        <!--==================== SWIPER JS ====================-->
+        <script src="{% static 'js/swiper-bundle.min.js' %}"></script>
+
+        <!--==================== MAIN JS ====================-->
+        <script src="{% static 'js/main.js' %}"></script>
+    </body>
+</html>

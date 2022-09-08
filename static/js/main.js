@@ -78,6 +78,7 @@ let swiperBlog = new Swiper('.blog__container', {
     cssMode: true,
     loop: true,
     spaceBetween: 48,
+    centerSlide: 'true',
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
