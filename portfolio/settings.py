@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'blog.apps.BlogConfig'
+    'blog.apps.BlogConfig',
+    'youtube_thumbnail',
 ]
 
 MIDDLEWARE = [

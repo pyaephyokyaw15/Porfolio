@@ -541,6 +541,16 @@ img {
     transform: translateX(.25rem);
 }
 
+.project__features {
+    display: block;
+    list-style-type: disc;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 40px;
+}
+
 .swiper-button-prev::after,
 .swiper-button-next::after{
     content: '';
