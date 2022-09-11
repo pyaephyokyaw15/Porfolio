@@ -99,7 +99,7 @@ let swiperBlog = new Swiper('.blog__container', {
 
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
-const sections = document.querySelectorAll('section[id]')
+const sections = document.querySelectorAll('section')
 
 function scrollActive(){
     const scrollY = window.pageYOffset
@@ -163,3 +163,20 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+
+// Add youtube embedded videos.
+document.addEventListener('DOMContentLoaded', function () {
+    let embeddedProject1 = document.querySelector("#embedded__project-1");
+    embeddedProject1.src = "https://www.youtube.com/embed/SuSdwEW9800";
+
+    let embeddedProject2 = document.querySelector("#embedded__project-2");
+    embeddedProject2.src = "https://www.youtube.com/embed/qrWc7qapw8w";
+
+
+    let embeddedProject3 = document.querySelector("#embedded__project-3");
+    embeddedProject3.src = "https://www.youtube.com/embed/uUhM6Nzlb60";
+    
+
+    
+});
